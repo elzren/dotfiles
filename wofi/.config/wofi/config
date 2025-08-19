@@ -1,0 +1,15 @@
+## Wofi Config
+
+show=drun
+prompt=Search...
+allow_images=true
+hide_scroll=true
+width=500
+height=300
+insensitive=true
+no_actions=true
+image_size=30
+
+line_wrap=off
+normal_window=true
+dynamic_lines=false
