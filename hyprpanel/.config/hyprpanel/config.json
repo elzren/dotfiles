@@ -387,7 +387,8 @@
       ],
       "middle": [
         "clock",
-        "windowtitle"
+        "windowtitle",
+        "media"
       ],
       "right": [
         "network",
@@ -512,5 +513,6 @@
   "theme.bar.buttons.modules.cpuTemp.border": "#fab387",
   "wallpaper.enable": true,
   "bar.windowtitle.label": true,
-  "menus.dashboard.shortcuts.enabled": false
+  "menus.dashboard.shortcuts.enabled": false,
+  "bar.workspaces.ignored": "-98"
 }

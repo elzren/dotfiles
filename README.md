@@ -10,6 +10,6 @@ yay -S ags-hyprpanel-git
 
 ```bash
 stow -Rvt ~ */
-systemctl enable ly
+systemctl enable sddm
 gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 ```

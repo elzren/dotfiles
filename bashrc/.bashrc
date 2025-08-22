@@ -12,6 +12,7 @@ PS1='[\u@\h \W]\$ '
 eval "$(starship init bash)"
 
 set -o vi
+
 alias vi='nvim'
 
 fastfetch
