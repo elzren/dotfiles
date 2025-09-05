@@ -13,6 +13,9 @@ eval "$(starship init bash)"
 
 set -o vi
 
+export EDITOR=vim
+export VISUAL=vim
+
 alias vi='nvim'
 
 fastfetch
