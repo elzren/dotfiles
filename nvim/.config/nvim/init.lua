@@ -34,5 +34,6 @@ require("lazy").setup({
 	require("plugins.alpha"),
 	require("plugins.indent-blankline"),
 	require("plugins.comment"),
+	require("plugins.dap"),
 	require("plugins.misc"),
 })
