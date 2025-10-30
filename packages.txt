@@ -44,3 +44,4 @@ unzip
 yt-dlp
 xorg-xhost
 timeshift
+noto-fonts-cjk

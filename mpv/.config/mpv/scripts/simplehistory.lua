@@ -29,10 +29,10 @@ local o = {
 	["alt+r", "alt+R"]
 	]], --Keybind that will be used to immediately load the last item without resuming when no video is playing. If video is playing then it will add into playlist
 	open_list_keybind = [[
-	[ ["y", "all"], ["Y", "all"], ["T", "recents"] ]
+	[ ["u", "all"], ["U", "all"], ["T", "recents"] ]
 	]], --Keybind that will be used to open the list along with the specified filter. Available filters: 'all', 'recents', 'distinct', 'protocols', 'fileonly', 'titleonly', 'timeonly', 'keywords'.
 	list_filter_jump_keybind = [[
-	[ ["y", "all"], ["Y", "all"], ["T", "recents"], ["d", "distinct"], ["D", "distinct"], ["f", "fileonly"], ["F", "fileonly"] ]
+	[ ["u", "all"], ["U", "all"], ["T", "recents"], ["d", "distinct"], ["D", "distinct"], ["f", "fileonly"], ["F", "fileonly"] ]
 	]], --Keybind that is used while the list is open to jump to the specific filter (it also enables pressing a filter keybind twice to close list). Available fitlers: 'all', 'recents', 'distinct', 'protocols', 'fileonly', 'titleonly', 'timeonly', 'keywords'.
 
 	-----Incognito Settings----
@@ -73,10 +73,10 @@ local o = {
 	["all", "recents", "distinct", "protocols", "playing", "fileonly", "titleonly", "keywords"]
 	]], --Jump to the following filters and in the shown sequence when navigating via left and right keys. You can change the sequence and delete filters that are not needed.
 	next_filter_sequence_keybind = [[
-	["RIGHT", "MBTN_FORWARD"]
+	["l", "MBTN_FORWARD"]
 	]], --Keybind that will be used to go to the next available filter based on the filters_and_sequence
 	previous_filter_sequence_keybind = [[
-	["LEFT", "MBTN_BACK"]
+	["h", "MBTN_BACK"]
 	]], --Keybind that will be used to go to the previous available filter based on the filters_and_sequence
 	loop_through_filters = true, --true is for bypassing the last filter to go to first filter when navigating through filters using arrow keys, and vice-versa. false disables this behavior.
 	keywords_filter_list = [[
@@ -156,10 +156,10 @@ local o = {
 	--Add below (after a comma) any additional keybind you want to bind. Or change the letter inside the quotes to change the keybind
 	--Example of changing and adding keybinds: --From ["b", "B"] To ["b"]. --From [""] to ["alt+b"]. --From [""] to ["a" "ctrl+a", "alt+a"]
 	list_move_up_keybind = [[
-	["UP", "WHEEL_UP"]
+	["k", "WHEEL_UP"]
 	]], --Keybind that will be used to navigate up on the list
 	list_move_down_keybind = [[
-	["DOWN", "WHEEL_DOWN"]
+	["j", "WHEEL_DOWN"]
 	]], --Keybind that will be used to navigate down on the list
 	list_page_up_keybind = [[
 	["PGUP"]
