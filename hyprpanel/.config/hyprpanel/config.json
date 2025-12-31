@@ -440,7 +440,7 @@
   "bar.workspaces.applicationIconOncePerWorkspace": true,
   "bar.workspaces.showAllActive": true,
   "bar.workspaces.numbered_active_indicator": "underline",
-  "bar.workspaces.workspaces": 5,
+  "bar.workspaces.workspaces": 7,
   "bar.workspaces.monitorSpecific": false,
   "bar.workspaces.applicationIconEmptyWorkspace": "󰣆",
   "theme.bar.buttons.windowtitle.enableBorder": false,
