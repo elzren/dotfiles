@@ -8,6 +8,7 @@ return {
 		ensure_installed = {
 			"c",
 			"cpp",
+			"glsl",
 			"lua",
 			"python",
 			"javascript",

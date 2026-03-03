@@ -206,6 +206,7 @@ return {
 		local servers = {
 			clangd = {},
 			cmake = {},
+			glsl_analyzer = {},
 			ts_ls = {},
 			-- gopls = {},
 			-- pyright = {},
