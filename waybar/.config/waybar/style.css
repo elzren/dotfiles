@@ -1,0 +1,170 @@
+@import "./rose-pine.css";
+
+* {
+  min-height: 0;
+  min-width: 0;
+  font-family: "JetBrainsMono NFP";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+window#waybar {
+  background-color: transparent;
+}
+
+#workspaces button {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  background-color: @base;
+  color: @iris;
+}
+
+#workspaces button:hover {
+  color: @base;
+  background-color: @iris;
+}
+
+#workspaces button.active {
+  background-color: @iris;
+  color: @base;
+}
+
+#workspaces button.urgent {
+  background-color: @base;
+  color: @love;
+}
+
+#custom-arch,
+#clock,
+#pulseaudio,
+#custom-power,
+#cpu,
+#tray,
+#memory,
+#window,
+#mpris,
+#battery,
+#network,
+#temperature,
+#backlight,
+#bluetooth {
+  padding: 0.3rem 0.6rem;
+  margin: 0.4rem 0.25rem;
+  border-radius: 6px;
+  background-color: @base;
+}
+
+#bluetooth {
+  color: @rose;
+}
+
+#bluetooth.disabled {
+  color: @subtle;
+}
+
+#backlight {
+  color: @rose;
+}
+
+#mpris.playing {
+  color: @rose;
+}
+
+#mpris.paused {
+  color: @subtle;
+}
+
+#network {
+  color: @iris;
+}
+
+#cpu {
+  color: @rose;
+}
+
+#memory {
+  color: @foam;
+}
+
+#clock {
+  color: @foam;
+}
+
+#clock.simpleclock {
+  color: @foam;
+}
+
+#window {
+  color: @iris;
+}
+
+#pulseaudio {
+  color: @foam;
+}
+
+#pulseaudio.muted {
+  color: @subtle;
+}
+
+#custom-arch {
+  color: @foam;
+}
+
+#custom-power {
+  color: @love;
+}
+
+#temperature {
+  color: @rose;
+}
+
+
+#battery.warning {
+  color: @gold;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#battery.critical {
+  color: @love;
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#battery.plugged,
+#battery.charging,
+#battery.full {
+  color: @iris;
+}
+
+#battery {
+  color: @iris;
+}
+
+tooltip {
+  background-color: @base;
+  color: @text;
+  border-radius: 8px;
+}
+
+tooltip decoration {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+@keyframes pulse {
+  0% {
+    color: #999;
+  }
+
+  50% {
+    color: currentColor;
+  }
+
+  100% {
+    color: #999;
+  }
+}

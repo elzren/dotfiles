@@ -1,0 +1,208 @@
+{
+    "position": "top",
+    "layer": "top",
+    "margin-bottom": 0,
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "spacing": 8,
+    "modules-left": [
+        "custom/arch",
+        "hyprland/workspaces",
+        "temperature",
+        "memory",
+        "network#bandwidth"
+        // "cpu",
+    ],
+    "modules-center": [
+        "clock",
+        "hyprland/window",
+        "mpris"
+    ],
+    "modules-right": [
+        "network",
+        "tray",
+        "backlight",
+        "pulseaudio",
+        "battery",
+        "custom/power"
+    ],
+    "custom/arch": {
+        "format": "󰣇",
+        "on-click": "kitty",
+        "tooltip-format": "Arch",
+        "tooltip": true
+    },
+    "hyprland/workspaces": {
+        "format": "{id}"
+    },
+    "hyprland/window": {
+        // "format": "{title}",
+        "format": "󰘔 {title}",
+        "rewrite": {
+            "^󰘔 $": "󰘔 hyprland"
+        },
+        "max-length": 40,
+        "separate-outputs": true
+    },
+    "cpu": {
+        "interval": 2,
+        "format": "󰍛 {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "interval": 2,
+        "format": " {percentage}%",
+        "tooltip-format": "Memory: {used:0.1f}G/{total:0.1f}G\nSwap: {swapUsed:0.1f}G/{swapTotal:0.1f}G"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "tooltip-format": "CPU Temp: {temperatureC}°C"
+    },
+    "network": {
+        "format-wifi": "{icon}{essid}",
+        "format-icons": [
+            "󰤯 ",
+            "󰤟 ",
+            "󰤢 ",
+            "󰤥 ",
+            "󰤨 "
+        ],
+        "format-ethernet": "󰈀 {ifname}",
+        "format-disconnected": "󰤭 Disconnected",
+        "format-alt": "󰛳 {ifname} {ipaddr}/{cidr}",
+        // "tooltip-format": "WiFi: {essid}\nSignal: {signalStrength}%\nFreq: {frequency}MHz\nIP: {ipaddr}",
+        "tooltip-format-wifi": "WiFi: {essid}\nSignal: {signalStrength}%\nFreq: {frequency}MHz\nIP: {ipaddr}",
+        "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}/{cidr}\nUp: {bandwidthUpBytes}\nDown: {bandwidthDownBytes}",
+    },
+    "network#bandwidth": {
+        "interface": "wlp0s20f3",
+        "format": " {bandwidthDownBytes}",
+        "format-alt": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "tooltip-format": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "interval": 1
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃝",
+            "󰃟",
+            "󰃠",
+            "󰃡"
+        ],
+        "on-scroll-up": "brightnessctl set 1%-",
+        "on-scroll-down": "brightnessctl set 1%+",
+        "smooth-scrolling-threshold": 1
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰸈 {volume}%",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰋎",
+            "headset": "󰋎",
+            "phone": "󰄜",
+            "portable": "󰄜",
+            "car": "󰄞",
+            "default": [
+                "󰕿",
+                "󰖀",
+                "󰕾"
+            ]
+        },
+        "scroll-step": 5,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        // "on-click-right": "pavucontrol",
+        "smooth-scrolling-threshold": 1
+    },
+    "battery": {
+        "interval": 2,
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰚥 {capacity}%",
+        "format-full": "󱐋 {capacity}%",
+        "format-alt": "{icon} {time}",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "tooltip-format": "{timeTo}, {capacity}%\nHealth: {health}%"
+    },
+    "clock": {
+        "format": " {:%a %b %d %H:%M}",
+        "format-alt": "󰥔 {:%H:%M}",
+        "tooltip-format": "<span color='#e0def4' font='JetBrainsMono Nerd Font 16'><tt><small>{calendar}</small></tt></span>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "on-click-right": "mode",
+            "format": {
+                "days": "<span weight='normal'>{}</span>",
+                "months": "<span color='#c4a7e7'><b>{}</b></span>",
+                "today": "<span color='#eb6f92' weight='700'><b>{}</b></span>",
+                "weekdays": "<span color='#9ccfd8'><b>{}</b></span>",
+                "weeks": "<span color='#ebbcba'><b>W{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-forward": "tz_up",
+            "on-click-backward": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 8
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "on-click": "hyprlock"
+        // "on-click": "wlogout --protocol layer-shell"
+    },
+    "mpris": {
+        "dynamic-order": [
+            "title",
+            "artist"
+        ],
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "max-length": 40,
+        "status-icons": {
+            "paused": ""
+        },
+        "player-icons": {
+            "default": "",
+            "spotify": "",
+            "firefox": "",
+            "mpv": ""
+        }
+        // "ignored-players": ["firefox"]
+    }
+}
