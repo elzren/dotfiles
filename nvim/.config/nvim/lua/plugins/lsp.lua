@@ -208,8 +208,17 @@ return {
 			cmake = {},
 			glsl_analyzer = {},
 			ts_ls = {},
-			-- gopls = {},
-			-- pyright = {},
+			asm_lsp = {
+				filetypes = { "asm", "s" },
+				settings = {
+					asm_lsp = {
+						default_dialect = "intel", -- or "att"
+						default_assembler = "gas", -- or "nasm", "masm"
+					},
+				},
+			},
+			gopls = {},
+			pyright = {},
 			-- rust_analyzer = {},
 			-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 			--
@@ -237,23 +246,23 @@ return {
 				},
 			},
 
-			-- ruff = {},
-			-- pylsp = {
-			-- 	settings = {
-			-- 		pylsp = {
-			-- 			plugins = {
-			-- 				pyflakes = { enabled = false },
-			-- 				pycodestyle = { enabled = false },
-			-- 				autopep8 = { enabled = false },
-			-- 				yapf = { enabled = false },
-			-- 				mccabe = { enabled = false },
-			-- 				pylsp_mypy = { enabled = false },
-			-- 				pylsp_black = { enabled = false },
-			-- 				pylsp_isort = { enabled = false },
-			-- 			},
-			-- 		},
-			-- 	},
-			-- },
+			ruff = {},
+			pylsp = {
+				settings = {
+					pylsp = {
+						plugins = {
+							pyflakes = { enabled = false },
+							pycodestyle = { enabled = false },
+							autopep8 = { enabled = false },
+							yapf = { enabled = false },
+							mccabe = { enabled = false },
+							pylsp_mypy = { enabled = false },
+							pylsp_black = { enabled = false },
+							pylsp_isort = { enabled = false },
+						},
+					},
+				},
+			},
 			html = { filetypes = { "html", "twig", "hbs" } },
 			cssls = {},
 			tailwindcss = {},

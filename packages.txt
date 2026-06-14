@@ -4,6 +4,7 @@ efibootmgr
 os-prober
 brightnessctl
 networkmanager
+iw
 alsa-utils
 pipewire-alsa
 pipewire-audio
@@ -16,6 +17,7 @@ neovim
 ripgrep
 fzf
 man-db
+man-pages
 sudo
 tealdeer
 fastfetch
@@ -44,4 +46,9 @@ unzip
 yt-dlp
 xorg-xhost
 timeshift
+ttf-jetbrains-mono-nerd
+ttf-cascadia-code-nerd
 noto-fonts-cjk
+lsof
+dunst
+waybar

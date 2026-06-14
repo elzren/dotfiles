@@ -4,12 +4,11 @@
 
 ```bash
 cat packages.txt | xargs sudo pacman -Syuv --noconfirm
-yay -S ags-hyprpanel-git
 ```
+
 ## Setup
 
 ```bash
 stow -Rvt ~ */
 systemctl enable sddm
-gsettings set org.gnome.desktop.interface gtk-theme "rose-pine-gtk"
 ```

@@ -9,6 +9,7 @@ return {
 			"c",
 			"cpp",
 			"glsl",
+			"asm",
 			"lua",
 			"python",
 			"javascript",
