@@ -16,6 +16,8 @@ set -o vi
 export EDITOR=vim
 export VISUAL=vim
 
-alias vi='nvim'
+HISTSIZE=-1
+HISTFILESIZE=-1
 
+alias vi='NVIM_APPNAME=lazyvim nvim'
 fastfetch

@@ -16,6 +16,8 @@ vim
 neovim
 ripgrep
 fzf
+fd
+lazygit
 man-db
 man-pages
 sudo
