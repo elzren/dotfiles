@@ -1,0 +1,23 @@
+-- name: Rosé Pine
+-- author: jishnurajendran
+-- upstream: https://github.com/jishnurajendran/hyprland-rosepine/blob/main/rose-pine.conf
+-- All natural pine, faux fur and a bit of soho vibes for the classy minimalist
+local colors = {
+  base           = "rgba(191724ff)",
+  surface        = "rgba(1f1d2eff)",
+  overlay        = "rgba(26233aff)",
+  muted          = "rgba(6e6a86ff)",
+  subtle         = "rgba(908caaff)",
+  text           = "rgba(e0def4ff)",
+  love           = "rgba(eb6f92ff)",
+  gold           = "rgba(f6c177ff)",
+  rose           = "rgba(ebbcbaff)",
+  pine           = "rgba(31748fff)",
+  foam           = "rgba(9ccfd8ff)",
+  iris           = "rgba(c4a7e7ff)",
+  highlightLow   = "rgba(21202eff)",
+  highlightMed   = "rgba(403d52ff)",
+  highlightHigh  = "rgba(524f67ff)",
+}
+
+return colors

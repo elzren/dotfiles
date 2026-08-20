@@ -23,6 +23,7 @@ man-pages
 sudo
 tealdeer
 fastfetch
+bash-completion
 sddm
 kitty
 hyprland
